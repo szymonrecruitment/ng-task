@@ -1,0 +1,9 @@
+@import "../../../styles/colors";
+
+header {
+  background-color: $color-dark-grey-dark;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}

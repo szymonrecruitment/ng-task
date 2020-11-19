@@ -1,0 +1,47 @@
+@import "../../../styles/colors";
+
+.servers-actions {
+  width: 140px;
+  height: 110px;
+  box-shadow: 0 0 7px -2px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  z-index: 100;
+  right: 14vw;
+  background: white;
+
+  &--small {
+    height: 55px;
+  }
+
+  .servers-actions-on {
+    height: 100%;
+  }
+
+  .servers-actions-off {
+    height: 100%;
+
+    .server-actions-turnOn {
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-white-dirty;
+      }
+    }
+  }
+
+  .server-actions-turn, .server-actions-reboot {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-white-dirty;
+    }
+  }
+}

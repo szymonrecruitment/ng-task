@@ -1,0 +1,12 @@
+.container {
+  max-width: 70vw;
+  align-content: normal;
+  margin: 0 auto;
+  padding-top: 60px;
+
+  .content-before-table {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

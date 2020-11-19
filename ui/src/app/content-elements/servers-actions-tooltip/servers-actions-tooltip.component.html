@@ -1,0 +1,15 @@
+<div class="servers-actions" [ngClass]="{'servers-actions--small': server?.status === 'OFFLINE'}">
+  <div class="servers-actions-on" *ngIf="server?.status === 'ONLINE'">
+    <div class="server-actions-turn" (click)="makeServerAction('turnOff')">
+      Turn off
+    </div>
+    <div class="server-actions-reboot" (click)="makeServerAction('reboot')">
+      Reboot
+    </div>
+  </div>
+  <div class="servers-actions-off" *ngIf="server?.status === 'OFFLINE'">
+    <div class="server-actions-turnOn" (click)="makeServerAction('turnOn')">
+      Turn on
+    </div>
+  </div>
+</div>

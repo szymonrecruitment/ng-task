@@ -1,0 +1,32 @@
+@import "../../../styles/colors";
+
+.server-search {
+  position: relative;
+
+  .server-search-input {
+    width: 263px;
+    height: 38px;
+    border-radius: 20px;
+    border: 2px solid $color-border-search;
+    background: $color-white-dirty;
+    padding-left: 50px;
+    color: $color-search-input;
+
+    &::placeholder {
+      color: $color-search-input;
+      font-size: 14px;
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .fa-search {
+    position: absolute;
+    left: 20px;
+    color: #A9AEC1;
+    top: 15px;
+  }
+}

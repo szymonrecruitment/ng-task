@@ -1,0 +1,66 @@
+@import "../../../styles/colors";
+
+.servers-table {
+  width: 100%;
+  background: white;
+
+  .servers-table-head {
+    .servers-table-tr {
+      padding: 0 20px;
+      height: 70px;
+
+      .servers-table-th {
+        font-size: 14px;
+        padding: 0 20px;
+        text-align: left;
+        color: $color-puprle-light;
+        font-weight: 600;
+
+        &--width-normal {
+          width: 20%;
+        }
+
+        &--width-big {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .servers-table-body {
+    .servers-table-tr {
+      height: 60px;
+      padding: 0 20px;
+
+      .servers-table-td {
+        border-top: 2px solid $color-table-border;
+        padding: 0 20px;
+        font-size: 13px;
+        color: $color-dark-grey-dark;
+
+        .fa-times {
+          color: $color-red;
+          font-size: 16px;
+          margin-right: 5px;
+        }
+
+        .fa-circle {
+          color: $color-green;
+          margin-right: 5px;
+        }
+
+        &--width-big {
+          text-align: right;
+        }
+
+        &--online {
+          color: $color-green;
+        }
+
+        &--rebooting {
+          color: $color-puprle-light;
+        }
+      }
+    }
+  }
+}

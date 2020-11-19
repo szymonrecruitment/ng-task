@@ -1,0 +1,11 @@
+<app-header></app-header>
+<ng-container *ngIf="servers$|async as severs">
+  <div class="container">
+    <div class="content-before-table">
+      <app-servers-info [serversNumber]="severs.length"></app-servers-info>
+      <app-servers-search [searchValue]="searchValue" (searchChange)="searchValue = $event"></app-servers-search>
+    </div>
+    <app-servers-table (serverTableAction)="serverAction($event)" [servers]="severs"
+                       [searchValue]="searchValue"></app-servers-table>
+  </div>
+</ng-container>

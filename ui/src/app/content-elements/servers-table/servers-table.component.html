@@ -1,0 +1,30 @@
+<table class="servers-table">
+  <thead class="servers-table-head">
+  <tr class="servers-table-tr">
+    <th class="servers-table-th servers-table-th--width-normal">
+      Name
+    </th>
+    <th class="servers-table-th servers-table-th--width-normal">
+      Status
+    </th>
+    <th class="servers-table-th servers-table-th--width-big">
+
+    </th>
+  </tr>
+  </thead>
+  <tbody class="servers-table-body">
+  <tr class="servers-table-tr" *ngFor="let server of servers | searchPipe : searchValue; let i = index">
+    <td class="servers-table-td">{{server.name}}</td>
+    <td class="servers-table-td">
+      <i class="fa fa-circle" aria-hidden="true" *ngIf="server.status === 'ONLINE'"></i>
+      <i class="fa fa-times" aria-hidden="true" *ngIf="server.status === 'OFFLINE'"></i>
+      <span
+        [ngClass]="{'servers-table-td--online': server.status === 'ONLINE', 'servers-table-td--rebooting':  server.status === 'REBOOTING'}">{{server.status}}</span>
+    </td>
+    <td class="servers-table-td servers-table-td--width-big"><i class="fa fa-ellipsis-h" aria-hidden="true"
+                                                                (click)="selectedIndex = i"></i></td>
+    <app-servers-actions-tooltip (serverAction)="serverAction($event)" [server]="server" *ngIf="selectedIndex === i"
+                                 (outsideClick)="selectedIndex = null"></app-servers-actions-tooltip>
+  </tr>
+  </tbody>
+</table>

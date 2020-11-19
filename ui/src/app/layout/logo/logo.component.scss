@@ -1,0 +1,30 @@
+@import "../../../styles/colors";
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 35px;
+    background: $color-grey;
+    margin-left: 20px;
+  }
+
+  .logo-circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid $color-purple;
+    margin-right: 10px;
+  }
+
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
